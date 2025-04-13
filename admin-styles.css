@@ -1,0 +1,350 @@
+/* Admin Styles */
+
+/* Admin Login Section */
+.admin-login {
+    background-color: var(--light-bg);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.login-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.2);
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+    background-color: var(--light-bg);
+    min-height: 80vh;
+    padding: 40px 0;
+}
+
+.dashboard-container {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-header h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+/* Note Form */
+.note-form-container {
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.note-form-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.note-form .form-group {
+    margin-bottom: 20px;
+}
+
+.note-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.note-form input,
+.note-form select,
+.note-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.note-form input:focus,
+.note-form select:focus,
+.note-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 107, 255, 0.2);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.save-btn {
+    flex: 1;
+}
+
+.cancel-btn {
+    flex: 1;
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Notes Table */
+.notes-table-container {
+    overflow-x: auto;
+}
+
+.table-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-container {
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.search-container button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.search-container button:hover {
+    background-color: var(--accent-color);
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-container select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.notes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.notes-table th,
+.notes-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notes-table th {
+    background-color: var(--light-bg);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.notes-table tr:hover {
+    background-color: rgba(245, 247, 255, 0.5);
+}
+
+.notes-table .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.notes-table .edit-btn,
+.notes-table .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.notes-table .edit-btn {
+    color: var(--primary-color);
+}
+
+.notes-table .delete-btn {
+    color: #e53935;
+}
+
+.notes-table .edit-btn:hover {
+    background-color: rgba(74, 107, 255, 0.1);
+}
+
+.notes-table .delete-btn:hover {
+    background-color: rgba(229, 57, 53, 0.1);
+}
+
+.no-notes {
+    text-align: center;
+    padding: 20px;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+/* Notification System */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 300px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notification.success {
+    border-left: 4px solid #4caf50;
+}
+
+.notification.error {
+    border-left: 4px solid #e53935;
+}
+
+.notification button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .table-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .notes-table th,
+    .notes-table td {
+        padding: 10px;
+    }
+    
+    .notes-table th:nth-child(4),
+    .notes-table td:nth-child(4) {
+        display: none;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .notification {
+        min-width: auto;
+        width: calc(100% - 40px);
+    }
+}

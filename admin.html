@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteNest Admin - Notes Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>NoteNest</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Website</a></li>
+                <li><a href="#" id="logoutBtn" class="logout-link" style="display: none;">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Login Section -->
+    <section id="adminLogin" class="admin-login">
+        <div class="container">
+            <h2 class="section-title">Admin Login</h2>
+            <div class="login-container">
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="cta-button login-btn">Login</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Dashboard Section -->
+    <section id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <div class="container">
+            <h2 class="section-title">Admin Dashboard</h2>
+            <div class="dashboard-container">
+                <div class="dashboard-header">
+                    <h3>Manage Notes</h3>
+                    <button id="addNoteBtn" class="cta-button">Add New Note</button>
+                </div>
+                
+                <!-- Add/Edit Note Form -->
+                <div id="noteFormContainer" class="note-form-container" style="display: none;">
+                    <h3 id="formTitle">Add New Note</h3>
+                    <form id="noteForm" class="note-form">
+                        <input type="hidden" id="noteId">
+                        <div class="form-group">
+                            <label for="noteTitle">Title</label>
+                            <input type="text" id="noteTitle" placeholder="Enter note title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteSemester">Semester</label>
+                            <select id="noteSemester" required>
+                                <option value="">Select Semester</option>
+                                <option value="1">1st Semester</option>
+                                <option value="2">2nd Semester</option>
+                                <option value="3">3rd Semester</option>
+                                <option value="4">4th Semester</option>
+                                <option value="5">5th Semester</option>
+                                <option value="6">6th Semester</option>
+                                <option value="7">7th Semester</option>
+                                <option value="8">8th Semester</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteDescription">Description</label>
+                            <textarea id="noteDescription" placeholder="Enter note description" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="noteDriveLink">Google Drive Link</label>
+                            <input type="url" id="noteDriveLink" placeholder="Enter Google Drive link" required>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="cta-button save-btn">Save Note</button>
+                            <button type="button" id="cancelBtn" class="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Notes Table -->
+                <div class="notes-table-container">
+                    <div class="table-filters">
+                        <div class="search-container">
+                            <input type="text" id="adminSearchInput" placeholder="Search notes...">
+                            <button id="adminSearchButton"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="filter-container">
+                            <label for="adminSemesterFilter">Filter by Semester:</label>
+                            <select id="adminSemesterFilter">
+                                <option value="all">All Semesters</option>
+                                <option value="1">1st Semester</option>
+                                <option value="2">2nd Semester</option>
+                                <option value="3">3rd Semester</option>
+                                <option value="4">4th Semester</option>
+                                <option value="5">5th Semester</option>
+                                <option value="6">6th Semester</option>
+                                <option value="7">7th Semester</option>
+                                <option value="8">8th Semester</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="notes-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Semester</th>
+                                <th>Description</th>
+                                <th>Drive Link</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="notesTableBody">
+                            <!-- Notes will be dynamically loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification System -->
+    <div id="notification" class="notification">
+        <span id="notificationMessage"></span>
+        <button id="closeNotification"><i class="fas fa-times"></i></button>
+    </div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
