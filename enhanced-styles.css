@@ -1,5 +1,88 @@
 /* Enhanced UI Styles for NoteNest */
 
+/* Image Standardization */
+.hero-img, .intro-img, .about-img, .coding-img {
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-img {
+    display: none; /* Hide the original image as we're using it as background */
+}
+
+.intro-img, .coding-img {
+    width: 100%;
+    height: 400px;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+.feature-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon img {
+    transform: scale(1.1);
+}
+
+/* Newsletter section image */
+.newsletter img {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Notes section center image */
+.notes .container > div:first-of-type img {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll; /* Better performance on mobile */
+    }
+    
+    .hero-content {
+        padding: 30px 20px;
+    }
+    
+    .intro-img, .about-img, .coding-img {
+        width: 100%;
+        height: 300px;
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+    }
+    
+    .newsletter img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto 20px;
+        display: block;
+    }
+}
+
 /* Updated Color Scheme */
 :root {
     --primary-color: #4361ee;
@@ -52,10 +135,17 @@
 
 /* Enhanced Hero Section */
 .hero {
-    background: linear-gradient(135deg, #f5f7ff 0%, #e0e7ff 100%);
+    background: linear-gradient(135deg, rgba(245, 247, 255, 0.7) 0%, rgba(224, 231, 255, 0.7) 100%);
     position: relative;
     padding: 160px 0 120px;
     overflow: hidden;
+    background-image: url('aktu.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .hero::before {
@@ -85,6 +175,12 @@
 .hero-content {
     position: relative;
     z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .hero-text {
@@ -483,6 +579,11 @@
 
 /* Responsive Design Enhancements */
 @media (max-width: 992px) {
+    .hero-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
     .hero-content h1 {
         font-size: 2.8rem;
     }
