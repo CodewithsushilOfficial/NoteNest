@@ -8,6 +8,8 @@
     <title>NoteNest – Free AKTU B.Tech Notes & Coding Resources Hub</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="enhanced-styles.css">
+    <link rel="stylesheet" href="internship-hackathon-styles.css">
+    <link rel="stylesheet" href="footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -22,6 +24,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#notes">Notes</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#hackathons">Hackathons</a></li>
                 <li><a href="admin.html" class="admin-link">Admin</a></li>
             </ul>
             <div class="hamburger">
@@ -230,6 +234,257 @@
         </div>
     </section>
 
+    <!-- Internships Section -->
+    <section id="internships" class="internships">
+        <div class="container">
+            <h2 class="section-title">Find the Perfect Internship Opportunity</h2>
+            <p class="section-intro">
+                Discover internship opportunities tailored for students to gain practical experience and enhance your resume.
+            </p>
+            
+            <div class="search-container">
+                <input type="text" id="internshipSearchInput" placeholder="Search by role, company, or location...">
+                <button id="internshipSearchButton"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="internship-filters">
+                <select class="filter-select" id="locationFilter">
+                    <option value="all">All Locations</option>
+                    <option value="remote">Remote</option>
+                    <option value="delhi">Delhi NCR</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="hyderabad">Hyderabad</option>
+                </select>
+                
+                <select class="filter-select" id="durationFilter">
+                    <option value="all">All Durations</option>
+                    <option value="1-3">1-3 Months</option>
+                    <option value="3-6">3-6 Months</option>
+                    <option value="6+">6+ Months</option>
+                </select>
+                
+                <select class="filter-select" id="fieldFilter">
+                    <option value="all">All Fields</option>
+                    <option value="software">Software Development</option>
+                    <option value="data">Data Science</option>
+                    <option value="design">UI/UX Design</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="mechanical">Mechanical</option>
+                    <option value="electrical">Electrical</option>
+                </select>
+            </div>
+            
+            <div class="internships-container" id="internshipsContainer">
+                <!-- 2025 Internship Opportunities -->
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <h3>AI/ML Engineering Intern</h3>
+                        <div class="company-name">Microsoft</div>
+                        <div class="internship-badge">Remote</div>
+                    </div>
+                    <div class="internship-body">
+                        <div class="internship-details">
+                            <div class="internship-detail">
+                                <i class="fas fa-clock"></i> 6 Months
+                            </div>
+                            <div class="internship-detail">
+                                <i class="fas fa-money-bill-wave"></i> ₹40,000/month
+                            </div>
+                            <div class="internship-detail">
+                                <i class="fas fa-graduation-cap"></i> B.Tech/M.Tech
+                            </div>
+                        </div>
+                        <div class="internship-description">
+                            Join Microsoft's AI team to develop cutting-edge machine learning solutions and generative AI applications. Work with large language models and contribute to next-generation AI tools.
+                        </div>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="deadline">Apply by: May 20, 2025</div>
+                        <a href="#" class="apply-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <h3>Quantum Computing Researcher</h3>
+                        <div class="company-name">Amazon Web Services</div>
+                        <div class="internship-badge">Hybrid - Bangalore</div>
+                    </div>
+                    <div class="internship-body">
+                        <div class="internship-details">
+                            <div class="internship-detail">
+                                <i class="fas fa-clock"></i> 4 Months
+                            </div>
+                            <div class="internship-detail">
+                                <i class="fas fa-money-bill-wave"></i> ₹45,000/month
+                            </div>
+                            <div class="internship-detail">
+                                <i class="fas fa-graduation-cap"></i> M.Tech/PhD
+                            </div>
+                        </div>
+                        <div class="internship-description">
+                            Work with AWS Quantum Computing division on breakthrough quantum algorithms and applications. Help develop quantum solutions for complex computational problems in cryptography and optimization.
+                        </div>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="deadline">Apply by: June 15, 2025</div>
+                        <a href="#" class="apply-btn">Apply Now</a>
+                    </div>
+                </div>
+                
+                <div class="internship-card">
+                    <div class="internship-header">
+                        <h3>AR/VR Development Intern</h3>
+                        <div class="company-name">Meta</div>
+                        <div class="internship-badge">Remote</div>
+                    </div>
+                    <div class="internship-body">
+                        <div class="internship-details">
+                            <div class="internship-detail">
+                                <i class="fas fa-clock"></i> 5 Months
+                            </div>
+                            <div class="internship-detail">
+                                <i class="fas fa-money-bill-wave"></i> ₹35,000/month
+                            </div>
+                            <div class="internship-detail">
+                                <i class="fas fa-graduation-cap"></i> B.Tech/M.Tech
+                            </div>
+                        </div>
+                        <div class="internship-description">
+                            Join Meta's Reality Labs to create immersive AR/VR experiences for the metaverse. Work with cutting-edge technologies like spatial computing, 3D modeling, and interactive design.
+                        </div>
+                    </div>
+                    <div class="internship-footer">
+                        <div class="deadline">Apply by: July 5, 2025</div>
+                        <a href="#" class="apply-btn">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hackathons Section -->
+    <section id="hackathons" class="hackathons">
+        <div class="container">
+            <h2 class="section-title">Upcoming Hackathons</h2>
+            <p class="section-intro">
+                Participate in exciting hackathons to showcase your skills, build innovative projects, and win amazing prizes.
+            </p>
+            
+            <div class="search-container">
+                <input type="text" id="hackathonSearchInput" placeholder="Search hackathons by name, technology, or location...">
+                <button id="hackathonSearchButton"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="hackathon-filters">
+                <select class="filter-select" id="hackathonLocationFilter">
+                    <option value="all">All Locations</option>
+                    <option value="online">Online</option>
+                    <option value="delhi">Delhi NCR</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="mumbai">Mumbai</option>
+                </select>
+                
+                <select class="filter-select" id="hackathonTypeFilter">
+                    <option value="all">All Types</option>
+                    <option value="ai">AI/ML</option>
+                    <option value="web">Web Development</option>
+                    <option value="mobile">Mobile Apps</option>
+                    <option value="blockchain">Blockchain</option>
+                    <option value="iot">IoT</option>
+                </select>
+            </div>
+            
+            <div class="internships-container" id="hackathonsContainer">
+                <!-- 2025 Hackathon Opportunities -->
+                <div class="hackathon-card">
+                    <div class="hackathon-image">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Hackathon Event">
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">Global AI Summit Hackathon</h3>
+                        <div class="hackathon-date">May 15-17, 2025</div>
+                        <div class="hackathon-description">
+                            Develop next-generation AI solutions using multimodal models and quantum computing techniques. Present your innovations to leading AI researchers and tech investors.
+                        </div>
+                        <div class="hackathon-details">
+                            <div class="hackathon-detail">
+                                <i class="fas fa-map-marker-alt"></i> Hybrid - Delhi & Online
+                            </div>
+                            <div class="hackathon-detail">
+                                <i class="fas fa-users"></i> Team Size: 2-5
+                            </div>
+                            <div class="hackathon-detail">
+                                <i class="fas fa-laptop-code"></i> AI/ML, Quantum Computing
+                            </div>
+                        </div>
+                        <div class="hackathon-footer">
+                            <div class="prize-pool">$75,000 Prize Pool</div>
+                            <a href="#" class="register-btn">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hackathon-card">
+                    <div class="hackathon-image">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Climate Tech Hackathon">
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">Climate Tech Innovation Challenge</h3>
+                        <div class="hackathon-date">June 20-22, 2025</div>
+                        <div class="hackathon-description">
+                            Create sustainable technology solutions to combat climate change. Work with environmental scientists and tech experts to develop innovations for a greener future.
+                        </div>
+                        <div class="hackathon-details">
+                            <div class="hackathon-detail">
+                                <i class="fas fa-map-marker-alt"></i> Online
+                            </div>
+                            <div class="hackathon-detail">
+                                <i class="fas fa-users"></i> Team Size: 1-4
+                            </div>
+                            <div class="hackathon-detail">
+                                <i class="fas fa-laptop-code"></i> IoT, Clean Energy, Data Science
+                            </div>
+                        </div>
+                        <div class="hackathon-footer">
+                            <div class="prize-pool">₹5,00,000 Prize Pool</div>
+                            <a href="#" class="register-btn">Register</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hackathon-card">
+                    <div class="hackathon-image">
+                        <img src="https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Metaverse Hackathon">
+                    </div>
+                    <div class="hackathon-content">
+                        <h3 class="hackathon-title">Metaverse Builders Summit</h3>
+                        <div class="hackathon-date">August 10-13, 2025</div>
+                        <div class="hackathon-description">
+                            Design and build immersive metaverse experiences using AR/VR technologies. Create the next generation of spatial computing applications with industry-leading tools.
+                        </div>
+                        <div class="hackathon-details">
+                            <div class="hackathon-detail">
+                                <i class="fas fa-map-marker-alt"></i> Mumbai & Online
+                            </div>
+                            <div class="hackathon-detail">
+                                <i class="fas fa-users"></i> Team Size: 2-4
+                            </div>
+                            <div class="hackathon-detail">
+                                <i class="fas fa-laptop-code"></i> AR/VR, 3D Modeling, Spatial Computing
+                            </div>
+                        </div>
+                        <div class="hackathon-footer">
+                            <div class="prize-pool">₹7,50,000 Prize Pool</div>
+                            <a href="#" class="register-btn">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Newsletter Section -->
     <section class="newsletter">
         <div class="container">
@@ -256,27 +511,67 @@
                 <div class="footer-section about-section">
                     <h3>About NoteNest</h3>
                     <p>NoteNest is dedicated to providing free B.Tech notes, coding resources, and video lectures to AKTU students, making study resources more accessible and organized.</p>
+                    <div class="footer-logo">
+                        <h2>NoteNest</h2>
+                        <p class="tagline">Your Academic Success Partner</p>
+                    </div>
                 </div>
+                
+                <div class="footer-section links-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                        <li><a href="#notes"><i class="fas fa-book"></i> Study Notes</a></li>
+                        <li><a href="#coding"><i class="fas fa-code"></i> Coding Resources</a></li>
+                        <li><a href="#internships"><i class="fas fa-briefcase"></i> Internships</a></li>
+                        <li><a href="#hackathons"><i class="fas fa-laptop-code"></i> Hackathons</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section resources-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i> AKTU Syllabus</a></li>
+                        <li><a href="#"><i class="fas fa-calendar-alt"></i> Academic Calendar</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> FAQs</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i> Contribute Notes</a></li>
+                        <li><a href="#"><i class="fas fa-bug"></i> Report Issues</a></li>
+                    </ul>
+                </div>
+                
                 <div class="footer-section contact-section">
-                    <h3>Contact Information</h3>
-                    <p><i class="fas fa-envelope"></i> Email: Codewithsushil7236@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> Phone: +91 7236896484</p>
-                </div>
-                <div class="footer-section social-section">
-                    <h3>Connect With Us</h3>
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:Codewithsushil7236@gmail.com">Codewithsushil7236@gmail.com</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+917236896484">+91 7236896484</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Location: AKTU, Uttar Pradesh, India</p>
+                    
+                    <h3 class="social-heading">Connect With Us</h3>
                     <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
+            
+            <div class="newsletter-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Stay updated with the latest resources, internship opportunities, and educational content.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+            
             <div class="footer-bottom">
                 <div class="legal-links">
-                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a> | <a href="#">Accessibility</a>
                 </div>
-                <p>&copy; 2025 NoteNest – All Rights Reserved.</p>
+                <p>&copy; 2025 NoteNest – All Rights Reserved. Designed with <i class="fas fa-heart"></i> for AKTU Students.</p>
             </div>
         </div>
     </footer>

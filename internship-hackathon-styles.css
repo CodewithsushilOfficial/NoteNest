@@ -1,0 +1,474 @@
+/* Enhanced Styles for Internship and Hackathon Sections */
+
+/* Common Styles for Both Sections */
+.internships, .hackathons {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.internships {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8eeff 100%);
+}
+
+.hackathons {
+    background: linear-gradient(135deg, #f5f7ff 0%, #e6f0ff 100%);
+}
+
+/* Decorative Elements */
+.internships::before, .hackathons::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.internships::before {
+    top: -100px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(67, 97, 238, 0.15) 0%, rgba(67, 97, 238, 0) 70%);
+}
+
+.hackathons::before {
+    bottom: -100px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(114, 9, 183, 0.15) 0%, rgba(114, 9, 183, 0) 70%);
+}
+
+/* Search and Filter Styles */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.15);
+    transform: translateY(-2px);
+}
+
+#internshipSearchInput, #hackathonSearchInput {
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#internshipSearchButton, #hackathonSearchButton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#internshipSearchButton:hover, #hackathonSearchButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+/* Filter Styles */
+.internship-filters, .hackathon-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-select {
+    padding: 12px 25px;
+    border: 1px solid rgba(67, 97, 238, 0.2);
+    border-radius: 50px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%234361ee' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+    padding-right: 40px;
+}
+
+.filter-select:hover, .filter-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Card Container Styles */
+.internships-container, #hackathonsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Internship Card Styles */
+.internship-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(225, 228, 232, 0.8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.internship-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+    border-color: rgba(67, 97, 238, 0.3);
+}
+
+.internship-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 25px 20px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.internship-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(30%, 30%);
+}
+
+.internship-header h3 {
+    margin: 0 0 5px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.internship-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.internship-body {
+    padding: 25px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.internship-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.internship-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--light-text);
+}
+
+.internship-detail i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.internship-description {
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.internship-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(245, 247, 250, 0.7);
+    border-top: 1px solid rgba(225, 228, 232, 0.5);
+}
+
+.deadline {
+    font-size: 0.9rem;
+    color: #e63946;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.deadline::before {
+    content: '⏰';
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+.apply-btn {
+    display: inline-block;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.2);
+}
+
+.apply-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.3);
+    color: white;
+}
+
+/* Hackathon Card Styles */
+.hackathon-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(225, 228, 232, 0.8);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hackathon-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(114, 9, 183, 0.15);
+    border-color: rgba(114, 9, 183, 0.3);
+}
+
+.hackathon-image {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hackathon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hackathon-card:hover .hackathon-image img {
+    transform: scale(1.1);
+}
+
+.hackathon-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.hackathon-content {
+    padding: 25px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hackathon-title {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hackathon-date {
+    display: inline-block;
+    background-color: rgba(114, 9, 183, 0.1);
+    color: var(--accent-color);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hackathon-description {
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.hackathon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.hackathon-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--light-text);
+}
+
+.hackathon-detail i {
+    color: var(--accent-color);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.hackathon-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.prize-pool {
+    font-weight: 700;
+    color: #2e7d32;
+    font-size: 1.1rem;
+}
+
+.register-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(114, 9, 183, 0.2);
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(114, 9, 183, 0.3);
+    color: white;
+}
+
+/* Animation for Cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.internship-card, .hackathon-card {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.internship-card:nth-child(1), .hackathon-card:nth-child(1) { animation-delay: 0.1s; }
+.internship-card:nth-child(2), .hackathon-card:nth-child(2) { animation-delay: 0.2s; }
+.internship-card:nth-child(3), .hackathon-card:nth-child(3) { animation-delay: 0.3s; }
+.internship-card:nth-child(4), .hackathon-card:nth-child(4) { animation-delay: 0.4s; }
+.internship-card:nth-child(5), .hackathon-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .internships-container, #hackathonsContainer {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .internships, .hackathons {
+        padding: 60px 0;
+    }
+    
+    .internships-container, #hackathonsContainer {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .filter-select {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    .internship-filters, .hackathon-filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .internship-header, .hackathon-content {
+        padding: 20px 15px;
+    }
+    
+    .internship-body {
+        padding: 20px 15px;
+    }
+    
+    .internship-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .apply-btn, .register-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
